@@ -1,0 +1,178 @@
+$primary-text-color: #323232;
+$active-color: #F78434;
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.father {
+    position: relative;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+
+    @media (max-width: 1200px) {
+        max-width: 90%;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px auto;
+
+    &-nav {
+        display: flex;
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-link {
+            color: $primary-text-color;
+            text-decoration: none;
+            margin-left: 42px;
+
+            @media (max-width: 992px) {
+                margin: 10px 20px 0;
+            }
+        } 
+    }
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+}
+
+.main-heading, .text {
+    color: $primary-text-color;
+}
+
+.main-heading {
+    font-size: 54px;
+    margin: 0 0 30px;
+    width: 680px;
+    position: relative;
+
+    @media (max-width: 48rem) {
+        width: 100%;
+    }
+
+    @media (max-width: 380px) {
+        font-size: 48px;
+    }
+}
+
+.intro-row {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.intro-colum {
+width: 52%;
+}
+
+.intro-colum:nth-of-type(2) {
+width: 48%;
+}
+
+.intro-img {
+    max-width: 100%;
+}
+
+.intro-form {
+    position: relative;
+    width: 460px;
+    margin-top: 40px;
+
+    .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+            @media (max-width: 550px) {
+                top: 100%;
+                right: 50%;
+        }
+    }
+
+    &::before {
+        content: "";
+        background-image: url(../img/Mail-icon.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 21px;
+        left: 28px;
+    }
+}
+
+.intro-input-email {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 29px;
+    border: 0;
+    padding: 14px 0px 20px 72px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+
+    @media (max-width: 500px) {
+        width: 320px;
+    }
+
+    &::placeholder {
+        color: #bbb;
+    }
+}
+
+.btn {
+    display: inline-block;
+    background-color: $active-color;
+    color: white;
+    border: 0;
+    border-radius: 29px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 17px 37px;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px auto;
+    display: flow-root;
+
+    @media (max-width: 550px) {
+        margin-top: 60px;
+    }
+
+    &-link {
+        @media (max-width: 850px) {
+        margin: 0 25px;
+        }
+    }   
+}
+
+@media (max-width: 768px) {
+    .intro-colum, .intro-colum:nth-of-type(2) {
+        width: 100%;
+    }
+}
